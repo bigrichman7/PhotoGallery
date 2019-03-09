@@ -116,8 +116,7 @@ public class PhotoGalleryFragment extends Fragment {
         setHasOptionsMenu(true);
         updateItems();
 
-        Intent intent = PollService.newIntent(getActivity());
-        getActivity().startService(intent);
+        PollService.setServiceAlarm(getActivity(), true);
 
         Handler responseHandler = new Handler();
         //Создание нового потока
